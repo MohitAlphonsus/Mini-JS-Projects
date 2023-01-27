@@ -13,4 +13,69 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	font-size: 1.6rem;
+	color: rgb(29, 37, 54);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+}
+
+/* UTILITY */
+.btn {
+	border: none;
+	font: inherit;
+	background-color: rgb(29, 37, 54);
+	color: #f7f7f7;
+	padding: 1rem 2rem;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+	transition: all 0.2s;
+}
+
+.btn:hover {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	transform: translateY(-1px);
+	filter: brightness(120%);
+}
+
+.btn:active {
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+	transform: translateY(1px);
+}
+
+.quote-container {
+	width: 70rem;
+	min-width: 30rem;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	padding: 2rem 4rem;
+	border-radius: 5px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.2rem;
+}
+
+.quote {
+	text-align: center;
+	font-size: 2.6rem;
+	font-weight: 600;
+	line-height: 1.6;
+}
+
+.quote__author {
+	font-style: italic;
+	font-size: 1.8rem;
+}
+
+.quote__buttons {
+	width: 100%;
+	display: flex;
+}
+
+.quote__buttons button {
+	margin-left: auto;
 }
