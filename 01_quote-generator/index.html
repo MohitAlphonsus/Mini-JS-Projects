@@ -10,20 +10,36 @@
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
 			rel="stylesheet"
 		/>
+		<!-- font awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<title>Document</title>
 		<link rel="stylesheet" href="style.css" />
 		<script src="script.js" defer></script>
 	</head>
 	<body>
 		<div class="quote-container" id="quote-container">
-			<p class="quote" id="quote">
-				Being a sex symbol has to do with an attitude, not looks. Most men think
-				it's looks, most women know otherwise
+			<div class="quote">
+				<i class="fas fa-quote-left"></i>
+				<p class="quote__text" id="quote-text"></p>
+			</div>
+			<p class="quote__author">
+				<span>&ndash;</span>
+				<span id="quote-author"></span>
 			</p>
-			<p class="quote__author" id="quote-author">&dash; Kathleen Turner</p>
 			<div class="quote__buttons">
-				<button class="btn">New Quote</button>
+				<button class="btn" id="tweet-quote">
+					<i class="fab fa-twitter"></i>
+				</button>
+				<button class="btn" id="new-quote">New Quote</button>
 			</div>
 		</div>
+		<!-- loader -->
+		<div class="lds-dual-ring" id="loader"></div>
 	</body>
 </html>

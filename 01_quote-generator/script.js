@@ -1,12 +1,57 @@
-async function getQuotes() {
-	const apiurl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
-	const response = await fetch(apiurl);
-	const data = await response.json();
-	console.log(data);
+'use strict';
+
+const quoteContainer = document.getElementById('quote-container');
+const quote = document.getElementById('quote-text');
+const quoteAuthor = document.getElementById('quote-author');
+const btnNewQuote = document.getElementById('new-quote');
+const btnTweetQuote = document.getElementById('tweet-quote');
+const loader = document.getElementById('loader');
+
+let apiQuotes = [];
+
+// Show loading
+function loading() {
+	quoteContainer.style.display = 'none';
 }
 
-// getQuotes();
+// hide loading
+function completeLoading() {
+	quoteContainer.style.display = 'flex';
+	loader.style.display = 'none';
+}
 
-// Every man dies. Not every man really lives
-//"Being a sex symbol has to do with an attitude, not looks. Most men think it's looks, most women know otherwise."
-//Kathleen Turner
+function newQuote() {
+	loading();
+	// picking random quote from api array
+	const randomQuote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
+
+	if (!randomQuote.author) quoteAuthor.textContent = 'Unknown';
+
+	quoteAuthor.textContent = randomQuote.author;
+	if (randomQuote.text.length > 120) quote.classList.add('long-quote');
+	else quote.classList.remove('long-quote');
+
+	// set quote
+	quote.textContent = randomQuote.text;
+
+	completeLoading();
+}
+
+async function getQuotes() {
+	loading();
+	const apiurl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
+	const response = await fetch(apiurl);
+	apiQuotes = await response.json();
+
+	newQuote();
+}
+
+function tweetQuote() {
+	const twitterUrl = `https://twitter.com/intent/tweet?text=${quote.textContent} - ${quoteAuthor.textContent}`;
+	window.open(twitterUrl, '_blank');
+}
+
+btnNewQuote.addEventListener('click', newQuote);
+btnTweetQuote.addEventListener('click', tweetQuote);
+
+getQuotes();
