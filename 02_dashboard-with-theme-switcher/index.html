@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+			integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Dashboard &dash; theme switcher</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div class="background-pattern"></div>
+		<div class="container">
+			<header class="header">
+				<h1 class="header__heading">
+					<span class="header__heading--main">Social Media Dashboard</span
+					><br />
+					<span class="header__heading--sub">Total Followers: 23,004</span>
+				</h1>
+				<div class="header__toggle-btn">Dark Mode</div>
+			</header>
+
+			<div class="dashboard">
+				<div class="dashboard__social-media grid-container">
+					<!-- 01 -->
+					<div class="card card--facebook">
+						<div class="card__header">
+							<i
+								class="fa-brands fa-square-facebook card__icon card__icon--facebook"
+							></i>
+							<span>@johndoe</span>
+						</div>
+						<div class="card__followers">
+							<span>1987</span><br />
+							<span>followers</span>
+						</div>
+						<div class="card__update ascending">
+							<i class="fa-sharp fa-solid fa-caret-up card__icon--small"></i>
+							<span>12 Today</span>
+						</div>
+					</div>
+					<!-- 02 -->
+					<div class="card card--twitter">
+						<div class="card__header">
+							<i
+								class="fa-brands fa-twitter card__icon card__icon--twitter"
+							></i>
+							<span>@johndoe</span>
+						</div>
+						<div class="card__followers">
+							<span>1044</span><br />
+							<span>followers</span>
+						</div>
+						<div class="card__update ascending">
+							<i class="fa-sharp fa-solid fa-caret-up card__icon--small"></i>
+							<span>99 Today</span>
+						</div>
+					</div>
+					<!-- 03 -->
+					<div class="card card--instagram">
+						<div class="card__header">
+							<i
+								class="fa-brands fa-instagram card__icon card__icon--instagram"
+							></i>
+							<span>@realjohndoe</span>
+						</div>
+						<div class="card__followers">
+							<span>11K</span><br />
+							<span>followers</span>
+						</div>
+						<div class="card__update ascending">
+							<i class="fa-sharp fa-solid fa-caret-up card__icon--small"></i>
+							<span>1099 Today</span>
+						</div>
+					</div>
+					<!-- 04 -->
+					<div class="card card--youtube">
+						<div class="card__header">
+							<i
+								class="fa-brands fa-youtube card__icon card__icon--youtube"
+							></i>
+							<span>John D.</span>
+						</div>
+						<div class="card__followers">
+							<span>8239</span><br />
+							<span>subscribers</span>
+						</div>
+						<div class="card__update decending">
+							<i class="fa-sharp fa-solid fa-caret-down card__icon--small"></i>
+							<span>144 Today</span>
+						</div>
+					</div>
+				</div>
+				<div class="dashboard__overview">
+					<h2>Overview - Today</h2>
+					<div class="grid-container mg-tp-sm">
+						<!-- 01 -->
+						<div class="overview-card">
+							<p>Page Views</p>
+							<i
+								class="fa-brands fa-square-facebook card__icon card__icon--facebook"
+							></i>
+							<span>87</span>
+							<div class="ascending">
+								<i class="fa-sharp fa-solid fa-caret-up card__icon--small"></i>
+								<span>3%</span>
+							</div>
+						</div>
+						<!-- 02 -->
+						<div class="overview-card">
+							<p>Likes</p>
+							<i
+								class="fa-brands fa-square-facebook card__icon card__icon--facebook"
+							></i>
+							<span>52</span>
+							<div class="decending">
+								<i
+									class="fa-sharp fa-solid fa-caret-down card__icon--small"
+								></i>
+								<span>2%</span>
+							</div>
+						</div>
+						<!-- 03 -->
+						<div class="overview-card">
+							<p>Likes</p>
+							<i
+								class="fa-brands fa-instagram card__icon card__icon--instagram"
+							></i>
+							<span>5462</span>
+							<div class="ascending">
+								<i class="fa-sharp fa-solid fa-caret-up card__icon--small"></i>
+								<span>2257%</span>
+							</div>
+						</div>
+						<!-- 04 -->
+						<div class="overview-card">
+							<p>Profile Views</p>
+							<i
+								class="fa-brands fa-instagram card__icon card__icon--instagram"
+							></i>
+							<span>52k</span>
+							<div class="ascending">
+								<i class="fa-sharp fa-solid fa-caret-up card__icon--small"></i>
+								<span>1375%</span>
+							</div>
+						</div>
+						<!-- 05 -->
+						<div class="overview-card">
+							<p>Retweets</p>
+							<i
+								class="fa-brands fa-twitter card__icon card__icon--twitter"
+							></i>
+							<span>117</span>
+							<div class="ascending">
+								<i class="fa-sharp fa-solid fa-caret-up card__icon--small"></i>
+								<span>303%</span>
+							</div>
+						</div>
+						<!-- 06 -->
+						<div class="overview-card">
+							<p>Likes</p>
+							<i
+								class="fa-brands fa-twitter card__icon card__icon--twitter"
+							></i>
+							<span>507</span>
+							<div class="ascending">
+								<i class="fa-sharp fa-solid fa-caret-up card__icon--small"></i>
+								<span>303%</span>
+							</div>
+						</div>
+						<!-- 07 -->
+						<div class="overview-card">
+							<p>Likes</p>
+							<i
+								class="fa-brands fa-youtube card__icon card__icon--youtube"
+							></i>
+							<span>107</span>
+							<div class="decending">
+								<i
+									class="fa-sharp fa-solid fa-caret-down card__icon--small"
+								></i>
+								<span>19%</span>
+							</div>
+						</div>
+						<!-- 08 -->
+						<div class="overview-card">
+							<p>Total Views</p>
+							<i
+								class="fa-brands fa-twitter card__icon card__icon--twitter"
+							></i>
+							<span>1407</span>
+							<div class="decending">
+								<i
+									class="fa-brands fa-youtube card__icon card__icon--youtube"
+								></i>
+								<span>12%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
