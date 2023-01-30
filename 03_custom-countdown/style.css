@@ -1,0 +1,96 @@
+:root {
+	--color-primary: #1c315e;
+	--color-primary-light: #227c70;
+	--color-light-1: #88a47c;
+	--color-light-2: #e6e2c3;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url(./bg.jpg) no-repeat center center/cover;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	width: calc(100% - 50%);
+}
+
+h2 {
+	font-size: 3rem;
+	color: var(--color-primary);
+}
+
+.btn {
+	border: none;
+	font: inherit;
+	font-size: 1.4rem;
+	padding: 1.5rem 0;
+	width: 100%;
+	margin-top: 2rem;
+	background-color: var(--color-primary);
+	color: var(--color-light-2);
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.btn:hover {
+	filter: brightness(110%);
+}
+
+.custom-countdown-input {
+	background-color: var(--color-light-2);
+	padding: 3rem;
+	border-radius: 3px;
+}
+
+.form {
+	padding: 2rem 0;
+}
+
+.form-group {
+	display: grid;
+	gap: 0.5rem;
+	margin-bottom: 2rem;
+}
+
+.form-group label {
+	font-size: 1.4rem;
+	color: var(--color-primary);
+}
+
+.form-group input {
+	padding: 1.5rem;
+	border: 1px solid var(--color-light-1);
+	border-radius: 5px;
+}
+
+.form-group input:focus {
+	outline: none;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
+}
+
+.countdown {
+	background-color: rgb(223, 130, 130);
+	padding: 3rem;
+}
+
+.countdown-complete {
+	background-color: #fff;
+	padding: 3rem;
+}
