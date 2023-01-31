@@ -16,24 +16,43 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="custom-countdown-input">
+			<div
+				class="countdown-container show-container"
+				id="custom-countdown-input"
+			>
 				<h2>Create Your Countdown</h2>
-				<form class="form">
+				<form class="form" id="form">
 					<div class="form-group">
-						<label>Title</label>
+						<label for="input-title">Title</label>
 						<input type="text" id="input-title" />
 					</div>
 					<div class="form-group">
-						<label>Pick your date</label>
+						<label for="input-date">Pick your date</label>
 						<input type="date" id="input-date" />
 					</div>
 					<button class="btn" type="submit">Start Countdown</button>
 				</form>
 			</div>
 
-			<!-- <div class="countdown"></div> -->
+			<div class="countdown-container" id="countdown">
+				<h2 id="custom-title"></h2>
+				<ul class="countdown-timer">
+					<li><span class="time-el"></span><span>Days</span></li>
+					<li><span class="time-el"></span><span>Hours</span></li>
+					<li><span class="time-el"></span><span>Minutes</span></li>
+					<li><span class="time-el"></span><span>Seconds</span></li>
+				</ul>
+				<button class="btn" id="reset-timer">RESET</button>
+			</div>
 
-			<!-- <div class="countdown-complete"></div> -->
+			<div
+				class="countdown-container countdown-container--complete"
+				id="countdown-complete"
+			>
+				<h2>Countdown Complete</h2>
+				<p id="complete-countdown-text"></p>
+				<button class="btn" id="new-countdown">New Countdown</button>
+			</div>
 		</div>
 	</body>
 </html>

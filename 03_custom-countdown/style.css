@@ -38,6 +38,8 @@ h2 {
 .btn {
 	border: none;
 	font: inherit;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 	font-size: 1.4rem;
 	padding: 1.5rem 0;
 	width: 100%;
@@ -53,10 +55,13 @@ h2 {
 	filter: brightness(110%);
 }
 
-.custom-countdown-input {
+.countdown-container {
 	background-color: var(--color-light-2);
 	padding: 3rem;
 	border-radius: 3px;
+	display: none;
+	flex-direction: column;
+	gap: 3rem;
 }
 
 .form {
@@ -85,12 +90,86 @@ h2 {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
 }
 
-.countdown {
-	background-color: rgb(223, 130, 130);
-	padding: 3rem;
+.countdown-timer {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	text-align: center;
+	justify-items: center;
 }
 
-.countdown-complete {
-	background-color: #fff;
-	padding: 3rem;
+.countdown-timer li {
+	display: grid;
+}
+
+.countdown-timer span:first-child {
+	font-size: 4rem;
+	font-weight: 500;
+}
+
+.countdown-timer span:last-child {
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 500;
+}
+
+.countdown-container--complete {
+	/* display: flex; */
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 40vh;
+}
+
+.countdown-container--complete p {
+	font-size: 2rem;
+}
+
+.countdown-container--complete h2 {
+	animation: myAnim 3s ease-in infinite normal forwards;
+}
+
+.show-container {
+	display: flex;
+}
+
+@keyframes myAnim {
+	0% {
+		/* opacity: 0.8; */
+		transform: scale(0.2);
+		color: rgb(168, 29, 29);
+	}
+
+	25% {
+		transform: scale(1.4);
+		color: rgb(168, 96, 29);
+	}
+
+	50% {
+		transform: scale(1.4);
+		color: rgb(168, 29, 156);
+	}
+
+	75% {
+		transform: scale(1.4);
+		color: rgb(168, 29, 94);
+	}
+
+	100% {
+		transform: scale(0.2);
+		color: rgb(168, 131, 29);
+	}
+}
+
+@media (max-width: 900px) {
+	.container {
+		width: calc(100% - 20%);
+	}
+}
+
+@media (max-width: 500px) {
+	.container {
+		width: calc(100% - 10%);
+	}
 }
